@@ -1,0 +1,67 @@
+ <style media="screen">
+
+        body{
+          background-color:white;
+        }
+
+        form{
+          margin:50px;
+          font-size:20px;
+        }
+        div{
+          margin:30px;
+          margin-top:40px;
+        }
+
+        label{
+          font-weight:bold;
+          margin-right:10px;
+        }
+        span{
+          margin-right:30px;
+        }
+
+        .button {
+              display: inline-block;
+              padding: 15px 25px;
+              font-size: 24px;
+              cursor: pointer;
+              text-align: center;
+              text-decoration: none;
+              outline: none;
+              color: #fff;
+              background-color: #4CAF50;
+              border: none;
+              border-radius: 15px;
+              box-shadow: 0 9px #999;
+              align-items: center;
+               position: relative;
+           left: -10px;
+            }
+
+        .button:hover {background-color: #3e8e41}
+
+        .button:active {
+          background-color: #3e8e41;
+          box-shadow: 0 5px #666;
+          transform: translateY(4px);
+          position: relative;
+           left: -10px;
+         }
+        h1
+        {color:blue;
+
+        text-align: center;
+        }
+
+
+      </style>
+</head>
+<form action = "/success" method = "post" enctype="multipart/form-data">
+        <input type="file" name="file" />
+        <input type = "submit" value="predict">
+    </form>
+ <div>
+          <h2>{{message}}</h2>
+      </div>
+<img src="{{url_for('send_image',filename=image_name)}}">

@@ -1,0 +1,67 @@
+<!-- all your CSS and JS code, including the stuff -->
+<!-- to handle the datepicker formatting -->
+<style media="screen" xmlns="http://www.w3.org/1999/html">
+
+        body{
+          background-color:#00ffff;
+        }
+
+        form{
+          margin:50px;
+          font-size:20px;
+        }
+        div{
+          margin:30px;
+          margin-top:40px;
+        }
+
+        label{
+          font-weight:bold;
+          margin-right:10px;
+        }
+        span{
+          margin-right:30px;
+        }
+
+        .button {
+              display: inline-block;
+              padding: 15px 25px;
+              font-size: 24px;
+              cursor: pointer;
+              text-align: center;
+              text-decoration: none;
+              outline: none;
+              color: #fff;
+              background-color: #4CAF50;
+              border: none;
+              border-radius: 15px;
+              box-shadow: 0 9px #999;
+              align-items: center;
+               position: relative;
+           left: 570px;
+            }
+
+
+        .button:hover {background-color: #3e8e41}
+
+        .button:active {
+          background-color: #3e8e41;
+          box-shadow: 0 5px #666;
+          transform: translateY(4px);
+          position: relative;
+           left: 570px;
+         }
+        h1
+        {color:blue;
+
+        text-align: center;
+        }
+
+
+      </style>
+<form action="/main_attendance_page" method="post">
+    {{ form.dt(class='datepicker') }}
+    {{ form.hidden_tag() }}
+    <input type="submit"/></input>
+</form>
+

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+<style>
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+h2
+{position: absolute;
+  left: 1200px;
+  top: 0px;
+  font-size: 2em}
+</style>
+<body>
+<table border="1" cellpadding="5" cellspacing="5" style="float:left">
+    <h1>Present</h1>
+    <tr>
+        <th>NAME</th>
+    <th>REG NO</th>
+
+</tr>
+{% for row in data %}
+
+<tr>
+
+{% for d in row %}
+
+<td>{{d}}</td>
+
+
+    {% endfor %}
+</tr>
+{% endfor %}
+</table>
+
+
+
+
+   <table border="1" cellpadding="5" cellspacing="5"  style="float:right">
+
+ <tr>
+        <th>NAME</th>
+    <th>REG NO</th>
+
+</tr>
+
+<h2>Absent</h2>
+{% for row in data1 %}
+<tr>
+
+{% for d in row %}
+
+<td>{{d}}</td>
+
+
+    {% endfor %}
+</tr>
+{% endfor %}
+
+
+</table>
+</body>
+</html>
